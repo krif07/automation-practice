@@ -30,5 +30,22 @@ public class BuyTShirt extends BaseTest{
                 productNameObtained,
                 String.format("Expected [%s], but optain [%s]", productName, productNameObtained)
         );
+
+        shoppingCartSummary.clickProceedToCheckout();
+        shoppingCartSummary.clickProcessAddress();
+        shoppingCartSummary.clickTermsOfServiceCheck();
+        shoppingCartSummary.clickProcessCarrier();
+        shoppingCartSummary.clickPayByCheque();
+        shoppingCartSummary.clickConfirmOrder();
+
+        String message = "Your order on My Store is complete.";
+        String messageGetted = shoppingCartSummary.getAlertSuccess();
+        Assert.assertEquals(
+                message,
+                messageGetted,
+                String.format("Message expected [%s], message receive [%s]",
+                        message, messageGetted)
+        );
+
     }
 }
