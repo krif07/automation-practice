@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.globant.automation.automationpractice'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
+    //testCompile group: 'io.appium', name: 'java-client', version: '7.3.0'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
+
+}
